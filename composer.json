@@ -1,5 +1,9 @@
 {
-
+    "name": "Calculator",
+    "description": "The PHP Calculator",
+    "keywords": ["calculator", "php"],
+    "license": "MIT",
+    "type": "project",
     "require-dev": {
         "phpunit/phpunit": "7.4"
     }
