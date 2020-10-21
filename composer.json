@@ -1,5 +1,5 @@
 {
-
+    "name": "calculator/calculator",
     "description": "The PHP Calculator",
     "keywords": ["calculator", "php"],
     "license": "MIT",
