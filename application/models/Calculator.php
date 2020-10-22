@@ -58,6 +58,6 @@ class Calculator
      */
     public function sum()
     {
-        return 0;
+        return getFirstNumber() + getSecondNumber();
     }
 }
