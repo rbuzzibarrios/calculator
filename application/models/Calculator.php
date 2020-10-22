@@ -52,4 +52,12 @@ class Calculator
     {
         $this->secondNumber = $secondNumber;
     }
+
+    /**
+     * return sum of two numbers
+     */
+    public function sum()
+    {
+        return $this->firstNumber + $this->secondNumber;
+    }
 }
