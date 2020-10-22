@@ -58,6 +58,6 @@ class Calculator
      */
     public function sum()
     {
-        return getFirstNumber() + getSecondNumber();
+        return $this->firstNumber + $this->secondNumber;
     }
 }
