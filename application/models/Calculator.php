@@ -60,4 +60,13 @@ class Calculator
     {
         return getFirstNumber() + getSecondNumber();
     }
+
+    /**
+     * return multiply of two numbers
+     */
+    public function multiply()
+    {
+        return 0;
+    }
+}
 }
