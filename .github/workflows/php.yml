@@ -53,10 +53,10 @@ jobs:
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer install --prefer-dist --no-progress --no-suggest
 
-      - name: PHP oskarstark cs-fixer
-        uses: docker://oskarstark/php-cs-fixer-ga
-        with:
-          args: --config=.php_cs.dist --diff --dry-run
+#      - name: PHP oskarstark cs-fixer
+#        uses: docker://oskarstark/php-cs-fixer-ga
+#        with:
+#          args: --config=.php_cs.dist --diff --dry-run
 
 
       - name: PHP cs-fixer
