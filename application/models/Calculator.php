@@ -2,8 +2,6 @@
 
 namespace Application\models;
 
-
-
 class Calculator
 {
     /** @var int */
