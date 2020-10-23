@@ -53,14 +53,14 @@ jobs:
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer install --prefer-dist --no-progress --no-suggest
 
-      - name: PHP-CS-Fixer
+      - name: PHP oskarstark cs-fixer
         uses: docker://oskarstark/php-cs-fixer-ga
-          with
-            args --config=.project.php_cs.dist --diff --dry-run
+        with:
+          args: --config=.project.php_cs.dist --diff --dry-run
 
 
-    #      - name: PHP cs-fixer
-    #        run: ./vendor/bin/php-cs-fixer fix -vv --dry-run --diff --using-cache=no
+      - name: PHP cs-fixer
+        run: vendor/bin/php-cs-fixer fix -vv --dry-run --diff --using-cache=no
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
