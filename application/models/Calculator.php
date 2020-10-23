@@ -60,4 +60,12 @@ class Calculator
     {
         return $this->firstNumber + $this->secondNumber;
     }
+
+    /**
+     * return multiply of two numbers
+     */
+    public function multiply()
+    {
+        return $this->firstNumber * $this->secondNumber;
+    }
 }
