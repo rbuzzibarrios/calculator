@@ -62,7 +62,7 @@ class Calculator
     }
 
     /**
-     * Multiply of two numbers
+     * Multiply two numbers
      * @return float|int
      */
     public function multiply()
