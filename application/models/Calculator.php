@@ -66,7 +66,7 @@ class Calculator
      */
     public function multiply()
     {
-        return 0;
+        return $this->firstNumber * $this->secondNumber;
     }
 }
 }
