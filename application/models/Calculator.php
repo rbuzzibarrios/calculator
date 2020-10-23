@@ -69,4 +69,3 @@ class Calculator
         return $this->firstNumber * $this->secondNumber;
     }
 }
-
