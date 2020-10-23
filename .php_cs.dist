@@ -75,5 +75,5 @@ return Config::create()
     ->setFinder($finder)
     ->setRules($fixers)
     ->setRiskyAllowed(true)
-    ->setUsingCache(true);
-    //->setLineEnding(PHP_EOL);
+    ->setUsingCache(true)
+    ->setLineEnding(PHP_EOL);
