@@ -54,7 +54,7 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-suggest
 
       - name: PHP-CS-Fixer
-        uses: OskarStark/php-cs-fixer-ga@2.16.4.1
+        uses: docker://oskarstark/php-cs-fixer-ga
           with:
             args: --config=.project.php_cs.dist --diff --dry-run
 
