@@ -72,7 +72,7 @@ class Calculator
     }
 
     /**
-     * Calculate the division of two numbers.
+     * Calculate the division of two numbers or throw exception if dividend is zero.
      * @return float|int
      * @throws DivideByZeroNotAllowedException
      */
