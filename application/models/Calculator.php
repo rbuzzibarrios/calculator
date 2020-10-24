@@ -71,6 +71,6 @@ class Calculator
 
     public function divide()
     {
-        return 0;
+        return (float) $this->firstNumber / $this->secondNumber;
     }
 }
