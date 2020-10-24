@@ -60,4 +60,12 @@ class Calculator
     {
         return $this->firstNumber + $this->secondNumber;
     }
+
+    /**
+     * return rest of two numbers
+     */
+    public function rest()
+    {
+        return 0;
+    }
 }
