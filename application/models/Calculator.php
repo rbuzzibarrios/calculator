@@ -70,7 +70,8 @@ class Calculator
     }
 
     /**
-     * return rest of two numbers
+     * return subtraction of two numbers
+
      */
     public function rest()
     {
