@@ -70,8 +70,8 @@ class Calculator
     }
 
     /**
-     * return subtraction of two numbers
-
+     * Return subtraction of two numbers in Calculator class
+     * return float|int
      */
     public function subtraction()
     {
