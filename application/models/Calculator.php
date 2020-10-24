@@ -68,4 +68,13 @@ class Calculator
     {
         return $this->firstNumber * $this->secondNumber;
     }
+
+    /**
+     * Return subtraction of two numbers in Calculator class
+     * return float|int
+     */
+    public function subtraction()
+    {
+        return $this->firstNumber - $this->secondNumber;
+    }
 }
