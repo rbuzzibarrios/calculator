@@ -68,4 +68,9 @@ class Calculator
     {
         return $this->firstNumber * $this->secondNumber;
     }
+
+    public function divide()
+    {
+        return 0;
+    }
 }
