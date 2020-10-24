@@ -73,7 +73,7 @@ class Calculator
      * return subtraction of two numbers
 
      */
-    public function rest()
+    public function subtraction()
     {
         return $this->firstNumber - $this->secondNumber;
     }
