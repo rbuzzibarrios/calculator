@@ -62,6 +62,14 @@ class Calculator
     }
 
     /**
+     * return multiply of two numbers
+     */
+    public function multiply()
+    {
+        return $this->firstNumber * $this->secondNumber;
+    }
+
+    /**
      * return rest of two numbers
      */
     public function rest()
