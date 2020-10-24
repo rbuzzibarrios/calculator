@@ -66,6 +66,6 @@ class Calculator
      */
     public function rest()
     {
-        return 0;
+        return $this->firstNumber - $this->secondNumber;
     }
 }
