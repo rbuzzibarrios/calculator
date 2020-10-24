@@ -69,8 +69,17 @@ class Calculator
         return $this->firstNumber * $this->secondNumber;
     }
 
+    /**
+     * Calculate the division of two numbers.
+     * @return float|int
+     * @throws \Exception
+     */
     public function divide()
     {
+        if ($this->secondNumber === 0) {
+            throw new  \Exception('Divide by zero is not allowed');
+        }
+
         return (float) $this->firstNumber / $this->secondNumber;
     }
 }
