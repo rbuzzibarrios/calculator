@@ -72,6 +72,15 @@ class Calculator
     }
 
     /**
+     * Return subtraction of two numbers in Calculator class
+     * return float|int
+     */
+    public function subtraction()
+    {
+        return $this->firstNumber - $this->secondNumber;
+    }
+
+    /**
      * Calculate the division of two numbers or throw exception if dividend is zero.
      * @return float|int
      * @throws DivideByZeroNotAllowedException
