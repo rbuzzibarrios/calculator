@@ -93,4 +93,32 @@ class Calculator
 
         return (float) $this->firstNumber / $this->secondNumber;
     }
+
+    /**
+     * Return square of $firstNumber in Calculator class
+     * return float|int
+     */
+    public function square()
+    {
+        return 0;
+    }
+
+    /**
+     * Return cube of $firstNumber in Calculator class
+     * return float|int
+     */
+    public function cube()
+    {
+        return 0;
+    }
+
+    /**
+     * Return result of raising $firstNumber to power $seconNumber in Calculator class
+     * return float|int
+     * PHP 5.6+ required
+     */
+    public function exp()
+    {
+        return 0;
+    }
 }
