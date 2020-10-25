@@ -1,6 +1,8 @@
 <?php
 
-namespace Application\models;
+namespace Application\Models;
+
+use Application\Exceptions\DivideByZeroNotAllowedException;
 
 class Calculator
 {
@@ -76,5 +78,19 @@ class Calculator
     public function subtraction()
     {
         return $this->firstNumber - $this->secondNumber;
+    }
+
+    /**
+     * Calculate the division of two numbers or throw exception if dividend is zero.
+     * @return float|int
+     * @throws DivideByZeroNotAllowedException
+     */
+    public function divide()
+    {
+        if ($this->secondNumber === 0) {
+            throw new DivideByZeroNotAllowedException();
+        }
+
+        return (float) $this->firstNumber / $this->secondNumber;
     }
 }
