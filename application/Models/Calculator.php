@@ -100,7 +100,7 @@ class Calculator
      */
     public function square()
     {
-        return 0;
+        return $this->firstNumber * $this->firstNumber;
     }
 
     /**
@@ -109,7 +109,7 @@ class Calculator
      */
     public function cube()
     {
-        return 0;
+        return $this->firstNumber *  $this->firstNumber * $this->firstNumber;
     }
 
     /**
@@ -119,6 +119,6 @@ class Calculator
      */
     public function exp()
     {
-        return 0;
+        return $this->firstNumber ** $this->secondNumber;
     }
 }
