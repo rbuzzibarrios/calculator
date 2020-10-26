@@ -8,20 +8,20 @@ class Calculator
 {
     use ValidateCalculatorNumberTrait;
 
-    /** @var int */
+    /** @var float */
     protected $firstNumber;
 
     /**
-     * @var int|null $secondNumber
+     * @var float|null $secondNumber
      */
     protected $secondNumber = null;
 
     /**
      * Calculator constructor.
-     * @param int $firstNumber
-     * @param int|null $secondNumber
+     * @param float $firstNumber
+     * @param float|null $secondNumber
      */
-    public function __construct(int $firstNumber, int $secondNumber = null)
+    public function __construct(float $firstNumber, float $secondNumber = null)
     {
         $this->firstNumber = $firstNumber;
         $this->secondNumber = $secondNumber;
@@ -85,7 +85,7 @@ class Calculator
 
     /**
      * Return subtraction of two numbers in Calculator class
-     * @return int|null
+     * @return float|null
      * @throws \Exception
      */
     public function subtraction()
