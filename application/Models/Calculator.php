@@ -132,6 +132,8 @@ class Calculator
      */
     public function exponencial()
     {
+        $this->validate(['secondNumber' => ['required']]);
+
         return pow($this->firstNumber, $this->secondNumber);
     }
 }
