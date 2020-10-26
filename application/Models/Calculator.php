@@ -133,6 +133,6 @@ class Calculator
      */
     public function exponencial()
     {
-        return $this->firstNumber ** $this->secondNumber;
+        return pow($this->firstNumber, $this->secondNumber);
     }
 }
