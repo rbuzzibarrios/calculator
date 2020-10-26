@@ -61,7 +61,7 @@ class Calculator
 
     /**
      * return sum of two numbers
-     * @return int|null
+     * @return float|null
      * @throws \Exception
      */
     public function sum()
