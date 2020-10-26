@@ -131,7 +131,7 @@ class Calculator
      * return float|int
      * PHP 5.6+ required
      */
-    public function exp()
+    public function exponencial()
     {
         return $this->firstNumber ** $this->secondNumber;
     }
