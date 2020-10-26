@@ -2,22 +2,26 @@
 
 namespace Application\Models;
 
-use Application\Exceptions\DivideByZeroNotAllowedException;
+use Application\Traits\ValidateCalculatorNumberTrait;
 
 class Calculator
 {
-    /** @var int */
+    use ValidateCalculatorNumberTrait;
+
+    /** @var float */
     protected $firstNumber;
 
-    /** @var int */
-    protected $secondNumber;
+    /**
+     * @var float|null $secondNumber
+     */
+    protected $secondNumber = null;
 
     /**
      * Calculator constructor.
-     * @param $firstNumber
-     * @param $secondNumber
+     * @param float $firstNumber
+     * @param float|null $secondNumber
      */
-    public function __construct($firstNumber, $secondNumber)
+    public function __construct(float $firstNumber, float $secondNumber = null)
     {
         $this->firstNumber = $firstNumber;
         $this->secondNumber = $secondNumber;
@@ -57,39 +61,48 @@ class Calculator
 
     /**
      * return sum of two numbers
+     * @return float|null
+     * @throws \Exception
      */
     public function sum()
     {
+        $this->validate(['secondNumber' => ['required']]);
+
         return $this->firstNumber + $this->secondNumber;
     }
 
     /**
      * return multiply of two numbers
+     * @return float|int
+     * @throws \Exception
      */
     public function multiply()
     {
+        $this->validate(['secondNumber' => ['required']]);
+
         return $this->firstNumber * $this->secondNumber;
     }
 
     /**
      * Return subtraction of two numbers in Calculator class
-     * return float|int
+     * @return float|null
+     * @throws \Exception
      */
     public function subtraction()
     {
+        $this->validate(['secondNumber' => ['required']]);
+
         return $this->firstNumber - $this->secondNumber;
     }
 
     /**
      * Calculate the division of two numbers or throw exception if dividend is zero.
      * @return float|int
-     * @throws DivideByZeroNotAllowedException
+     * @throws \Exception
      */
     public function divide()
     {
-        if ($this->secondNumber === 0) {
-            throw new DivideByZeroNotAllowedException();
-        }
+        $this->validate(['secondNumber' => ['required', 'not_equal_zero']]);
 
         return (float) $this->firstNumber / $this->secondNumber;
     }
