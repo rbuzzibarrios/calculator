@@ -114,7 +114,6 @@ class Calculator
     public function square()
     {
         return pow($this->firstNumber, 2);
-
     }
 
     /**
