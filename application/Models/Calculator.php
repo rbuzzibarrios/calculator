@@ -113,7 +113,8 @@ class Calculator
      */
     public function square()
     {
-        return $this->firstNumber * $this->firstNumber;
+        return pow($this->firstNumber, 2);
+
     }
 
     /**
