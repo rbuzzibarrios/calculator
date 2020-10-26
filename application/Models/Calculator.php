@@ -60,7 +60,7 @@ class Calculator
     }
 
     /**
-     * return sum of two numbers
+     * Return sum of two numbers
      * @return float|null
      * @throws \Exception
      */
