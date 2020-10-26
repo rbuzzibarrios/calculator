@@ -106,4 +106,34 @@ class Calculator
 
         return (float) $this->firstNumber / $this->secondNumber;
     }
+
+    /**
+     * Return square of $firstNumber in Calculator class
+     * return float|int
+     */
+    public function square()
+    {
+        return pow($this->firstNumber, 2);
+    }
+
+    /**
+     * Return cube of $firstNumber in Calculator class
+     * return float|int
+     */
+    public function cube()
+    {
+        return pow($this->firstNumber, 3);
+    }
+
+    /**
+     * Return result of raising $firstNumber to power $seconNumber in Calculator class
+     * return float|int
+     * PHP 5.6+ required
+     */
+    public function exponencial()
+    {
+        $this->validate(['secondNumber' => ['required']]);
+
+        return pow($this->firstNumber, $this->secondNumber);
+    }
 }
