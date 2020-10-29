@@ -69,6 +69,19 @@ class FizzBuzz{
         return $output;
     }
 
+    /**
+     * function run.
+     * return a list with results of is_fizz_buzz function
+     * $max_num is the length of the array  
+     */
+    public function run(){
+
+        for($i = 1; $i <= $max_num; $i++){
+            echo $i." ".fizz_buzz($i);
+        }
+
+    }
+
 }
 
 ?>
