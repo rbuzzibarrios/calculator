@@ -9,7 +9,7 @@ class FizzBuzz{
     use ValidateCalculatorNumberTrait;
 
     /** @var int */
-    protected $max_number;
+    protected $maxNumber;
 
     /**
      * FizzBuzz constructor.
