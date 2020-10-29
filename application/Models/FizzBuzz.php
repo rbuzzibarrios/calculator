@@ -78,7 +78,6 @@ class FizzBuzz{
         for($i = 1; $i <= $max_num; $i++){
             echo $i." ".fizz_buzz($i);
         }
-
     }
 
 }
