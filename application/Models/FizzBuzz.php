@@ -44,7 +44,6 @@ class FizzBuzz{
      * return the number if $n isen't a multiple of 3 or 5 
      */
     function is_fizz_buzz($n){
-
         $output = '';
         
             switch(true){
