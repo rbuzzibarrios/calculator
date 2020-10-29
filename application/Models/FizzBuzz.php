@@ -45,7 +45,6 @@ class FizzBuzz{
      */
     function is_fizz_buzz($n){
         $output = '';
-        
             switch(true){
                 case($n % 15 === 0):
                     $output .= "FizzBuzz"."\n";
