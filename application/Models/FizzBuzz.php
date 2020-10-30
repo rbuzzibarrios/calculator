@@ -15,9 +15,9 @@ class FizzBuzz{
      * FizzBuzz constructor.
      * @param int $number
      */
-    public function __construct(int $max_number)
+    public function __construct(int $maxNumber)
     {
-        $this->max_number = $max_number;
+        $this->maxNumber = $maxNumber;
     }
 
     /**
@@ -25,15 +25,15 @@ class FizzBuzz{
      */
     public function getMaxNumber()
     {
-        return $this->max_number;
+        return $this->maxNumber;
     }
 
     /**
      * @param mixed $number
      */
-    public function setMaxNumber($max_number)
+    public function setMaxNumber($maxNumber)
     {
-        $this->max_number = $max_number;
+        $this->maxNumber = $maxNumber;
     }
 
     /**
@@ -43,23 +43,23 @@ class FizzBuzz{
      * return FizzBuzz if $n is multiple of both 3 and 5
      * return the number if $n isen't a multiple of 3 or 5 
      */
-    function is_fizz_buzz($n){
+    function is_fizz_buzz($number){
         $output = '';
             switch(true){
-                case($n % 15 === 0):
-                    $output .= "FizzBuzz"."\n";
+                case($number % 15 === 0):
+                    $output .= "FizzBuzz\n";
                     break;
         
-                case($n % 3 === 0 ):
-                    $output .= "Fizz"."\n";
+                case($number % 3 === 0 ):
+                    $output .= "Fizz\n";
                     break;
         
-                case($n % 5 === 0 ):
-                    $output .= "Buzz"."\n";
+                case($number % 5 === 0 ):
+                    $output .= "Buzz\n";
                     break;
         
                 default:
-                    $output .= $n."\n";
+                    $output .= $number."\n";
                     break;
             }
         
@@ -73,8 +73,9 @@ class FizzBuzz{
      */
     public function run()
     {
+        $this->validate(['maxNumber' => ['required', 'less_than_zero']]);
 
-        for($i = 1; $i <= $max_num; $i++){
+        for($i = 1; $i <= $maxNumber; $i++){
             echo $i." ".fizz_buzz($i);
         }
     }
