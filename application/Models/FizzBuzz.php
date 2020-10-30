@@ -78,6 +78,5 @@ class FizzBuzz{
             echo $i." ".fizz_buzz($i);
         }
     }
-
 }
 ?>
