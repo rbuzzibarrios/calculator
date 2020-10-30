@@ -4,7 +4,8 @@ namespace Application\Models;
 
 use Application\Traits\ValidateCalculatorNumberTrait;
 
-class FizzBuzz{
+class FizzBuzz
+{
 
     use ValidateCalculatorNumberTrait;
 
