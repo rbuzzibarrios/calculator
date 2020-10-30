@@ -44,7 +44,8 @@ class FizzBuzz
      * return FizzBuzz if $n is multiple of both 3 and 5
      * return the number if $n isen't a multiple of 3 or 5 
      */
-    function is_fizz_buzz($number){
+    public function isFizzBuzz($number)
+    {
         $output = '';
             switch(true) {
                 case($number % 15 === 0):
