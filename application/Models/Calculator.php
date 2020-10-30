@@ -1,6 +1,5 @@
 <?php
 
-#require "class.FizzBuzz.php";
 namespace Application\Models;
 
 use Application\Traits\ValidateCalculatorNumberTrait;
