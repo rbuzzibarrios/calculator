@@ -144,7 +144,8 @@ class Calculator
      */
     public function runFizzBuzz($number)
     {
-        $FizzBuzz = new FizzBuzz();
+        $fizzBuzz = new FizzBuzz($number);
+
         return $fizzBuzz->run();
     }
 }
