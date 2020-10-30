@@ -1,8 +1,10 @@
 <?php
 
+#require "class.FizzBuzz.php";
 namespace Application\Models;
 
 use Application\Traits\ValidateCalculatorNumberTrait;
+use Application\Models\FizzBuzz;
 
 class Calculator
 {
@@ -135,5 +137,15 @@ class Calculator
         $this->validate(['secondNumber' => ['required']]);
 
         return pow($this->firstNumber, $this->secondNumber);
+    }
+
+     /**
+     * Return result of run method on FizzBuzz class
+     * return chain string
+     */
+    public function runFizzBuzz()
+    {
+        $FizzBuzz = new FizzBuzz();
+        $FizzBuzz->run();
     }
 }
