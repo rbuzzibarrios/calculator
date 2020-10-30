@@ -143,7 +143,7 @@ class Calculator
      * Return result of run method on FizzBuzz class
      * return chain string
      */
-    public function runFizzBuzz()
+    public function runFizzBuzz($number)
     {
         $FizzBuzz = new FizzBuzz();
         $FizzBuzz->run();
