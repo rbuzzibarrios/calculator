@@ -74,7 +74,6 @@ class FizzBuzz{
     public function run()
     {
         $this->validate(['maxNumber' => ['required', 'less_than_zero']]);
-
         for($i = 1; $i <= $maxNumber; $i++){
             echo $i." ".fizz_buzz($i);
         }
