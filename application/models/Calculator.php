@@ -123,6 +123,7 @@ class Calculator
     public function cube()
     {
         return pow($this->firstNumber, 3);
+
     }
 
     /**
