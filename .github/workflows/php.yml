@@ -54,6 +54,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.composer-cache.outputs.cache-hit != 'true'
+        run: composer install --prefer-dist --no-progress --no-suggest
 
 #      - name: PHP cs-fixer
 #        uses: docker://oskarstark/php-cs-fixer-ga
