@@ -126,9 +126,8 @@ class Calculator
     }
 
     /**
-     * Return result of raising $firstNumber to power $seconNumber in Calculator class
-     * return float|int
-     * PHP 5.6+ required
+     * @return float|int
+     * @throws \Exception
      */
     public function exponencial()
     {
