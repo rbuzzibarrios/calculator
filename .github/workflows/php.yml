@@ -18,7 +18,7 @@ jobs:
 #      run: composer validate
 
     - name: Composer update
-      run: composer self-update
+      run: composer update
 
     - name: Cache Composer packages
       id: composer-cache
