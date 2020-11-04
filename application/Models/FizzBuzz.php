@@ -70,7 +70,7 @@ class FizzBuzz
     /**
      * function run.
      * return a list with results of is_fizz_buzz function
-     * $max_num is the length of the array
+     * $maxNum is the length of the array
      */
     public function run()
     {
