@@ -28,7 +28,7 @@ class Calculator
     }
 
     /**
-     * @return mixed
+     * @return float
      */
     public function getFirstNumber()
     {
