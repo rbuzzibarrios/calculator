@@ -13,7 +13,7 @@ class CalculatorTest extends TestCase
     public function testSum()
     {
         $calculator = new Calculator(1, 2);
-        $this->assertEquals( 3, $calculator->sum( 1, 2 ), 'El resultado de 1 + 2 debe ser 3.' );
+        $this->assertEquals(3, $calculator->sum(1, 2), 'El resultado de 1 + 2 debe ser 3.');
     }
 
     /**
@@ -22,6 +22,6 @@ class CalculatorTest extends TestCase
     public function testSumFloat()
     {
         $calculator = new Calculator(1.5, 2.4);
-        $this->assertEquals( 3.9, $calculator->sum( 1.5, 2.4 ), 'El resultado de 1.5 + 2.4 debe ser 3.9' );
+        $this->assertEquals(3.9, $calculator->sum(1.5, 2.4), 'El resultado de 1.5 + 2.4 debe ser 3.9');
     }
 }
