@@ -7,6 +7,7 @@
  */
 
 namespace Application\Tests;
+
 use Application\Models\Calculator;
 use PHPUnit\Framework\TestCase;
 
