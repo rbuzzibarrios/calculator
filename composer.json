@@ -7,7 +7,10 @@
     "require-dev": {
         "phpunit/phpunit": "7.4"
     },
-"autoload": {
+    "require": {
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "autoload": {
         "psr-4": {
             "Application\\": "application/"
         }
