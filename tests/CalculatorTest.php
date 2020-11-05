@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: JEDV
- * Date: 04/11/2020
- * Time: 22:19
- */
 
 namespace Application\Tests;
 
@@ -15,7 +9,6 @@ class CalculatorTest extends TestCase
 {
     /**
      * Test para comprobar la funcionalidad del metodo sum con enteros
-     * @test
      */
     public function testSum()
     {
@@ -25,7 +18,6 @@ class CalculatorTest extends TestCase
 
     /**
      * Test para comprobar la funcionalidad del metodo sum con flotantes
-     * @test
      */
     public function testSumFloat()
     {
