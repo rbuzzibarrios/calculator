@@ -3,7 +3,6 @@
 namespace Application\Models;
 
 use Application\Traits\ValidateCalculatorNumberTrait;
-use Application\Models\FizzBuzz;
 
 class Calculator
 {
