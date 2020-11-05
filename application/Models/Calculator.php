@@ -138,7 +138,7 @@ class Calculator
         return pow($this->firstNumber, $this->secondNumber);
     }
 
-     /**
+    /**
      * Return result of run method on FizzBuzz class
      * return chain string
      */
