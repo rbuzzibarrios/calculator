@@ -114,4 +114,22 @@ class CalculatorTest extends TestCase
         $calculator = new Calculator(1.8);
         $this->assertEquals(5.832, $calculator->cube(1.8), 'El resultado de elevar al cubo 1.8 debe ser 5.832.');
     }
+
+    /**
+     * Test para comprobar la funcionalidad del metodo exponencial con enteros
+     */
+    public function testExponencial()
+    {
+        $calculator = new Calculator(10, 2);
+        $this->assertEquals(100, $calculator->exponencial(10, 2), 'El resultado de elevar al 10 a la 2 debe ser 100.');
+    }
+
+    /**
+     * Test para comprobar la funcionalidad del metodo exponencial con flotantes
+     */
+    public function testExponencialFloat()
+    {
+        $calculator = new Calculator(0.5, 2.0);
+        $this->assertEquals(0.25, $calculator->exponencial(0.5, 2.0), 'El resultado de elevar 0.5 a la 1.5 debe ser 0.25.');
+    }
 }
