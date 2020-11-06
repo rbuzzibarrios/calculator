@@ -42,4 +42,22 @@ class CalculatorTest extends TestCase
         $calculator = new Calculator(5.8, 3.7);
         $this->assertEquals(2.1, $calculator->subtraction(5.8, 3.7), 'El resultado de 5.8 - 3.7 debe ser 2.1.');
     }
+
+    /**
+     * Test para comprobar la funcionalidad del metodo multiply con enteros
+     */
+    public function testMultiply()
+    {
+        $calculator = new Calculator(12, 3);
+        $this->assertEquals(36, $calculator->multiply(12, 3), 'El resultado de 12 * 3 debe ser 36.');
+    }
+
+    /**
+     * Test para comprobar la funcionalidad del metodo multiply con flotantes
+     */
+    public function testMultiplyFloat()
+    {
+        $calculator = new Calculator(2.8, 8.7);
+        $this->assertEquals(24.36, $calculator->multiply(2.8, 8.7), 'El resultado de 2.8 * 8.7 debe ser 24.36.');
+    }
 }
