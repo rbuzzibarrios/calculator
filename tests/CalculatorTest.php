@@ -78,4 +78,22 @@ class CalculatorTest extends TestCase
         $calculator = new Calculator(58.8, 2.4);
         $this->assertEquals(24.5, $calculator->divide(58.8, 2.4), 'El resultado de 58.8 / 2.4 debe ser 24.5.');
     }
+
+    /**
+     * Test para comprobar la funcionalidad del metodo square con enteros
+     */
+    public function testSquare()
+    {
+        $calculator = new Calculator(7);
+        $this->assertEquals(49, $calculator->square(7), 'El resultado de elevar al cuadrado 7 debe ser 49.');
+    }
+
+    /**
+     * Test para comprobar la funcionalidad del metodo square con flotantes
+     */
+    public function testsquareFloat()
+    {
+        $calculator = new Calculator(8.8);
+        $this->assertEquals(77.44, $calculator->square(8.8), 'El resultado de elevar al cuadrado 8.8 debe ser 77.44.');
+    }
 }
