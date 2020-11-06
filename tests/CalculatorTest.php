@@ -60,4 +60,22 @@ class CalculatorTest extends TestCase
         $calculator = new Calculator(2.8, 8.7);
         $this->assertEquals(24.36, $calculator->multiply(2.8, 8.7), 'El resultado de 2.8 * 8.7 debe ser 24.36.');
     }
+
+    /**
+     * Test para comprobar la funcionalidad del metodo divide con enteros
+     */
+    public function testDivide()
+    {
+        $calculator = new Calculator(24, 3);
+        $this->assertEquals(8, $calculator->divide(24, 3), 'El resultado de 24 / 3 debe ser 8.');
+    }
+
+    /**
+     * Test para comprobar la funcionalidad del metodo divide con flotantes
+     */
+    public function testDivideFloat()
+    {
+        $calculator = new Calculator(58.8, 2.4);
+        $this->assertEquals(24.5, $calculator->divide(58.8, 2.4), 'El resultado de 58.8 / 2.4 debe ser 24.5.');
+    }
 }
