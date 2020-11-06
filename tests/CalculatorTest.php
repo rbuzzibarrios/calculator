@@ -96,4 +96,22 @@ class CalculatorTest extends TestCase
         $calculator = new Calculator(8.8);
         $this->assertEquals(77.44, $calculator->square(8.8), 'El resultado de elevar al cuadrado 8.8 debe ser 77.44.');
     }
+
+    /**
+     * Test para comprobar la funcionalidad del metodo cube con enteros
+     */
+    public function testCube()
+    {
+        $calculator = new Calculator(13);
+        $this->assertEquals(2197, $calculator->cube(13), 'El resultado de elevar al cubo 13 debe ser 2197.');
+    }
+
+    /**
+     * Test para comprobar la funcionalidad del metodo cube con flotantes
+     */
+    public function testCubeFloat()
+    {
+        $calculator = new Calculator(1.8);
+        $this->assertEquals(5.832, $calculator->cube(1.8), 'El resultado de elevar al cubo 1.8 debe ser 5.832.');
+    }
 }
