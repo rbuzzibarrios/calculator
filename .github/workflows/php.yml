@@ -13,10 +13,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      #    - name: Validate composer.json and composer.lock
-      #      run: composer validate
-
       - name: Composer update
         run: composer update
 
@@ -56,20 +52,8 @@ jobs:
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer install --prefer-dist --no-progress --no-suggest
 
-      #      - name: PHP cs-fixer
-      #        uses: docker://oskarstark/php-cs-fixer-ga
-      #        with:
-      #          args: --config=.php_cs.dist --diff --dry-run -vvv
-
-
       - name: PHP cs-fixer
         run: vendor/bin/php-cs-fixer fix -vv --dry-run --diff --using-cache=no
-
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
-
-    # - name: Run test suite
-    #   run: composer run-script test
 
   tests:
     needs: build
