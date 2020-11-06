@@ -78,5 +78,5 @@ jobs:
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer install --prefer-dist --no-progress --no-suggest
 
-      - name: Runing tests
+      - name: Running tests
         run: vendor/bin/phpunit -d memory_limit=1024M tests
