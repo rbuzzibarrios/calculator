@@ -2,6 +2,7 @@
 
 namespace Application\Tests;
 
+use Application\Exceptions\DivideByZeroNotAllowedException;
 use Application\Models\Calculator;
 use PHPUnit\Framework\TestCase;
 
@@ -131,5 +132,15 @@ class CalculatorTest extends TestCase
     {
         $calculator = new Calculator(0.5, 2.0);
         $this->assertEquals(0.25, $calculator->exponencial(0.5, 2.0), 'El resultado de elevar 0.5 a la 1.5 debe ser 0.25.');
+    }
+
+    /**
+     * Test para comprobar que la funcionalidad del metodo dicide lanza un excepcion cuando se intenta dividir por cero
+     */
+    public function testDivisionByZeroThrowsException()
+    {
+        $calculator = new Calculator(5, 0);
+        $this->expectExceptionMessage('secondNumber attribute can not be zero.');
+        $calculator->divide(5,0);
     }
 }
