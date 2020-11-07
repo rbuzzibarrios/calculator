@@ -135,12 +135,62 @@ class CalculatorTest extends TestCase
     }
 
     /**
-     * Test para comprobar que la funcionalidad del metodo dicide lanza un excepcion cuando se intenta dividir por cero
+     * Test para comprobar que la funcionalidad del metodo divide lanza un excepcion cuando se intenta dividir por cero
      */
     public function testDivisionByZeroThrowsException()
     {
         $calculator = new Calculator(5, 0);
         $this->expectExceptionMessage('secondNumber attribute can not be zero.');
-        $calculator->divide(5,0);
+        $calculator->divide(5, 0);
+    }
+
+    /**
+     * Test para comprobar la funcionalidad de la validacion secondNumber require en la funcion divide
+     */
+    public function testDivideValidationThrowsException()
+    {
+        $calculator = new Calculator(2, null);
+        $this->expectExceptionMessage('secondNumber attribute is required.');
+        $calculator->divide(2, null);
+    }
+
+    /**
+     * Test para comprobar la funcionalidad de la validacion secondNumber require en la funcion sum
+     */
+    public function testSumValidationThrowsException()
+    {
+        $calculator = new Calculator(2, null);
+        $this->expectExceptionMessage('secondNumber attribute is required.');
+        $calculator->sum(2, null);
+    }
+
+    /**
+     * Test para comprobar la funcionalidad de la validacion secondNumber require en la funcion multiply
+     */
+    public function testMultiplyValidationThrowsException()
+    {
+        $calculator = new Calculator(2, null);
+        $this->expectExceptionMessage('secondNumber attribute is required.');
+        $calculator->multiply(2, null);
+    }
+
+    /**
+     * Test para comprobar la funcionalidad de la validacion secondNumber require en la funcion subtraction
+     */
+    public function testSubtractionValidationThrowsException()
+    {
+        $calculator = new Calculator(2, null);
+        $this->expectExceptionMessage('secondNumber attribute is required.');
+        $calculator->subtraction(2, null);
+    }
+
+    /**
+     * Test para comprobar la funcionalidad de la validacion secondNumber require en la funcion exponencial
+     */
+    public function testExponencialValidationThrowsException()
+    {
+        $calculator = new Calculator(2, null);
+        $this->expectExceptionMessage('secondNumber attribute is required.');
+        $calculator->exponencial(2, null);
     }
 }
