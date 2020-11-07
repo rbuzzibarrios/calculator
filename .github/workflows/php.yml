@@ -82,4 +82,4 @@ jobs:
         run: vendor/bin/phpunit -d memory_limit=1024M tests
 
       - name: PHP STAN CODE ANALYZE
-        run: vendor/bin/phpstan analyse application\ tests\ --level=2
+        run: vendor/bin/phpstan analyse application tests --level=2
