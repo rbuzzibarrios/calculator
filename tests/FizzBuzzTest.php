@@ -7,15 +7,11 @@ use PHPUnit\Framework\TestCase;
 
 class FizzBuzzTest extends TestCase
 {
-
     /**
      * Test para comprobar la funcinalidad del metodo isFizzBuzz
      */
     public function testIsFizzBuzz()
     {
-        
+        $fizzbuzz = new FizzBuzz(3);        
     }
-
 }
-
-?>
