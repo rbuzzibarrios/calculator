@@ -2,7 +2,6 @@
 
 namespace Application\Tests;
 
-use Application\Exceptions\DivideByZeroNotAllowedException;
 use Application\Models\Calculator;
 use PHPUnit\Framework\TestCase;
 
