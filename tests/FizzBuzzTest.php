@@ -1,4 +1,5 @@
 <?php
+
 namespace Application\Tests;
 
 use Application\Models\FizzBuzz;
