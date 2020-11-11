@@ -138,8 +138,9 @@ class Calculator
     }
 
     /**
-     * Return result of run method on FizzBuzz class
-     * return chain string
+     * Return result of run method on FizzBuzz class.  Return chain string
+     * @param int $number
+     * @return string
      */
     public function runFizzBuzz($number)
     {
