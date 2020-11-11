@@ -31,7 +31,7 @@ class CalculatorTest extends TestCase
     public function testSubtraction()
     {
         $calculator = new Calculator(8, 3);
-        $this->assertEquals(5, $calculator->subtraction(8, 3), 'El resultado de 8 - 3 debe ser 5.');
+        $this->assertEquals(5, $calculator->subtraction(), 'El resultado de 8 - 3 debe ser 5.');
     }
 
     /**
@@ -40,7 +40,7 @@ class CalculatorTest extends TestCase
     public function testSubtractionFloat()
     {
         $calculator = new Calculator(5.8, 3.7);
-        $this->assertEquals(2.1, $calculator->subtraction(5.8, 3.7), 'El resultado de 5.8 - 3.7 debe ser 2.1.');
+        $this->assertEquals(2.1, $calculator->subtraction(), 'El resultado de 5.8 - 3.7 debe ser 2.1.');
     }
 
     /**
@@ -49,7 +49,7 @@ class CalculatorTest extends TestCase
     public function testMultiply()
     {
         $calculator = new Calculator(12, 3);
-        $this->assertEquals(36, $calculator->multiply(12, 3), 'El resultado de 12 * 3 debe ser 36.');
+        $this->assertEquals(36, $calculator->multiply(), 'El resultado de 12 * 3 debe ser 36.');
     }
 
     /**
@@ -58,7 +58,7 @@ class CalculatorTest extends TestCase
     public function testMultiplyFloat()
     {
         $calculator = new Calculator(2.8, 8.7);
-        $this->assertEquals(24.36, $calculator->multiply(2.8, 8.7), 'El resultado de 2.8 * 8.7 debe ser 24.36.');
+        $this->assertEquals(24.36, $calculator->multiply(), 'El resultado de 2.8 * 8.7 debe ser 24.36.');
     }
 
     /**
@@ -67,7 +67,7 @@ class CalculatorTest extends TestCase
     public function testDivide()
     {
         $calculator = new Calculator(24, 3);
-        $this->assertEquals(8, $calculator->divide(24, 3), 'El resultado de 24 / 3 debe ser 8.');
+        $this->assertEquals(8, $calculator->divide(), 'El resultado de 24 / 3 debe ser 8.');
     }
 
     /**
@@ -76,7 +76,7 @@ class CalculatorTest extends TestCase
     public function testDivideFloat()
     {
         $calculator = new Calculator(58.8, 2.4);
-        $this->assertEquals(24.5, $calculator->divide(58.8, 2.4), 'El resultado de 58.8 / 2.4 debe ser 24.5.');
+        $this->assertEquals(24.5, $calculator->divide(), 'El resultado de 58.8 / 2.4 debe ser 24.5.');
     }
 
     /**
@@ -85,7 +85,7 @@ class CalculatorTest extends TestCase
     public function testSquare()
     {
         $calculator = new Calculator(7);
-        $this->assertEquals(49, $calculator->square(7), 'El resultado de elevar al cuadrado 7 debe ser 49.');
+        $this->assertEquals(49, $calculator->square(), 'El resultado de elevar al cuadrado 7 debe ser 49.');
     }
 
     /**
@@ -94,7 +94,7 @@ class CalculatorTest extends TestCase
     public function testsquareFloat()
     {
         $calculator = new Calculator(8.8);
-        $this->assertEquals(77.44, $calculator->square(8.8), 'El resultado de elevar al cuadrado 8.8 debe ser 77.44.');
+        $this->assertEquals(77.44, $calculator->square(), 'El resultado de elevar al cuadrado 8.8 debe ser 77.44.');
     }
 
     /**
@@ -103,7 +103,7 @@ class CalculatorTest extends TestCase
     public function testCube()
     {
         $calculator = new Calculator(13);
-        $this->assertEquals(2197, $calculator->cube(13), 'El resultado de elevar al cubo 13 debe ser 2197.');
+        $this->assertEquals(2197, $calculator->cube(), 'El resultado de elevar al cubo 13 debe ser 2197.');
     }
 
     /**
@@ -112,7 +112,7 @@ class CalculatorTest extends TestCase
     public function testCubeFloat()
     {
         $calculator = new Calculator(1.8);
-        $this->assertEquals(5.832, $calculator->cube(1.8), 'El resultado de elevar al cubo 1.8 debe ser 5.832.');
+        $this->assertEquals(5.832, $calculator->cube(), 'El resultado de elevar al cubo 1.8 debe ser 5.832.');
     }
 
     /**
@@ -121,7 +121,7 @@ class CalculatorTest extends TestCase
     public function testExponencial()
     {
         $calculator = new Calculator(10, 2);
-        $this->assertEquals(100, $calculator->exponencial(10, 2), 'El resultado de elevar al 10 a la 2 debe ser 100.');
+        $this->assertEquals(100, $calculator->exponencial(), 'El resultado de elevar al 10 a la 2 debe ser 100.');
     }
 
     /**
@@ -130,7 +130,7 @@ class CalculatorTest extends TestCase
     public function testExponencialFloat()
     {
         $calculator = new Calculator(0.5, 2.0);
-        $this->assertEquals(0.25, $calculator->exponencial(0.5, 2.0), 'El resultado de elevar 0.5 a la 1.5 debe ser 0.25.');
+        $this->assertEquals(0.25, $calculator->exponencial(), 'El resultado de elevar 0.5 a la 1.5 debe ser 0.25.');
     }
 
     /**
@@ -140,7 +140,7 @@ class CalculatorTest extends TestCase
     {
         $calculator = new Calculator(5, 0);
         $this->expectExceptionMessage('secondNumber attribute can not be zero.');
-        $calculator->divide(5, 0);
+        $calculator->divide();
     }
 
     /**
@@ -150,7 +150,7 @@ class CalculatorTest extends TestCase
     {
         $calculator = new Calculator(2, null);
         $this->expectExceptionMessage('secondNumber attribute is required.');
-        $calculator->divide(2, null);
+        $calculator->divide();
     }
 
     /**
@@ -160,7 +160,7 @@ class CalculatorTest extends TestCase
     {
         $calculator = new Calculator(2, null);
         $this->expectExceptionMessage('secondNumber attribute is required.');
-        $calculator->sum(2, null);
+        $calculator->sum();
     }
 
     /**
@@ -170,7 +170,7 @@ class CalculatorTest extends TestCase
     {
         $calculator = new Calculator(2, null);
         $this->expectExceptionMessage('secondNumber attribute is required.');
-        $calculator->multiply(2, null);
+        $calculator->multiply();
     }
 
     /**
@@ -180,7 +180,7 @@ class CalculatorTest extends TestCase
     {
         $calculator = new Calculator(2, null);
         $this->expectExceptionMessage('secondNumber attribute is required.');
-        $calculator->subtraction(2, null);
+        $calculator->subtraction();
     }
 
     /**
@@ -190,6 +190,6 @@ class CalculatorTest extends TestCase
     {
         $calculator = new Calculator(2, null);
         $this->expectExceptionMessage('secondNumber attribute is required.');
-        $calculator->exponencial(2, null);
+        $calculator->exponencial();
     }
 }
