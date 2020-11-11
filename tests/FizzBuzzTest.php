@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 namespace Application\Tests;
 
 use Application\Models\FizzBuzz;
@@ -67,7 +66,7 @@ class FizzBuzzTest extends TestCase
     public function testIsFizzBuzzTwo()
     {
         $fizzbuzz = new FizzBuzz(2);
-        $this->assertEquals("2\n" , $fizzbuzz->isFizzBuzz(2), 'Retorna el # si no es divisible por 3 o 5');
+        $this->assertEquals("2\n", $fizzbuzz->isFizzBuzz(2), 'Retorna el # si no es divisible por 3 o 5');
     }
 
     /**
@@ -76,6 +75,6 @@ class FizzBuzzTest extends TestCase
     public function testIsFizzBuzzSixthyTwo()
     {
         $fizzbuzz = new FizzBuzz(62);
-        $this->assertEquals("62\n" , $fizzbuzz->isFizzBuzz(62), 'Retorna el # si no es divisible por 3 o 5');
+        $this->assertEquals("62\n", $fizzbuzz->isFizzBuzz(62), 'Retorna el # si no es divisible por 3 o 5');
     }
 }
