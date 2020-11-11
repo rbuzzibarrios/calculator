@@ -8,10 +8,29 @@ use PHPUnit\Framework\TestCase;
 class FizzBuzzTest extends TestCase
 {
     /**
-     * Test para comprobar la funcinalidad del metodo isFizzBuzz
+     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 3
      */
-    public function testIsFizzBuzz()
+    public function testIsFizzBuzzThree()
     {
-        $fizzbuzz = new FizzBuzz(3);        
+        $fizzbuzz = new FizzBuzz(3);
+        $this->assertEquals("Fizz\n", $fizzbuzz->isFizzBuzz(3), "Retorna Fizz si el numero es divisible por 3");
+    }
+
+    /**
+     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 5
+     */
+    public function testIsFizzBuzzFive()
+    {
+        $fizzbuzz = new FizzBuzz(5);
+        $this->assertEquals("Buzz\n", $fizzbuzz->isFizzBuzz(5), "Retorna Buzz si el numero es divisible por 5");
+    }
+
+    /**
+     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 5
+     */
+    public function testIsFizzBuzzFifteen()
+    {
+        $fizzbuzz = new FizzBuzz(15);
+        $this->assertEquals("FizzBuzz\n", $fizzbuzz->isFizzBuzz(15), "Retorna FizzBuzz si el numero es divisible por 15");
     }
 }
