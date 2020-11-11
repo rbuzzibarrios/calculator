@@ -13,7 +13,7 @@ class FizzBuzzTest extends TestCase
     public function testIsFizzBuzzThree()
     {
         $fizzbuzz = new FizzBuzz(3);
-        $this->assertEquals("Fizz\n", $fizzbuzz->isFizzBuzz(3), "Retorna Fizz si el numero es divisible por 3");
+        $this->assertEquals("Fizz\n", $fizzbuzz->isFizzBuzz(3), 'Retorna Fizz si el numero es divisible por 3');
     }
 
     /**
@@ -22,7 +22,7 @@ class FizzBuzzTest extends TestCase
     public function testIsFizzBuzzFive()
     {
         $fizzbuzz = new FizzBuzz(5);
-        $this->assertEquals("Buzz\n", $fizzbuzz->isFizzBuzz(5), "Retorna Buzz si el numero es divisible por 5");
+        $this->assertEquals("Buzz\n", $fizzbuzz->isFizzBuzz(5), 'Retorna Buzz si el numero es divisible por 5');
     }
 
     /**
@@ -31,6 +31,6 @@ class FizzBuzzTest extends TestCase
     public function testIsFizzBuzzFifteen()
     {
         $fizzbuzz = new FizzBuzz(15);
-        $this->assertEquals("FizzBuzz\n", $fizzbuzz->isFizzBuzz(15), "Retorna FizzBuzz si el numero es divisible por 15");
+        $this->assertEquals("FizzBuzz\n", $fizzbuzz->isFizzBuzz(15), 'Retorna Buzz si el numero es divisible por 5');
     }
 }
