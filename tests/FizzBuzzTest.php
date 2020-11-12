@@ -78,4 +78,13 @@ class FizzBuzzTest extends TestCase
         $fizzbuzz = new FizzBuzz(62);
         $this->assertEquals("62\n", $fizzbuzz->isFizzBuzz(62), 'Retorna el # si no es divisible por 3 o 5');
     }
+
+    /**
+     * Test para comprobar la funcinalidad del metodo run con 15
+     */
+    public function testRun()
+    {
+        $fizzbuzz = new FizzBuzz(15);
+        $this->assertEquals("1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n", $fizzbuzz->run(), 'Retorna cadena conformada con resultados de aplicar isFizzBuzz a un array');
+    }
 }
