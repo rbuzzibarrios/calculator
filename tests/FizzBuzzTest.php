@@ -87,4 +87,14 @@ class FizzBuzzTest extends TestCase
         $fizzbuzz = new FizzBuzz(15);
         $this->assertEquals("1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n", $fizzbuzz->run(), 'Retorna cadena conformada con resultados de aplicar isFizzBuzz a un array');
     }
+
+    /**
+     * Test para comprobar la funcionalidad de la validacion secondNumber require en la funcion exponencial
+     */
+    public function testRunValidationThrowsException()
+    {
+        $calculator = new FizzBuzz(-2);
+        $this->expectExceptionMessage('maxNumber attribute can not lesser than zero.');
+        $calculator->run();
+    }
 }
