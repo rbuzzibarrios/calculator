@@ -89,7 +89,7 @@ class FizzBuzzTest extends TestCase
     }
 
     /**
-     * Test para comprobar la funcionalidad de la validacion secondNumber require en la funcion exponencial
+     * Test para comprobar la funcionalidad de la validacion maxNumber no puede ser < que cero
      */
     public function testRunValidationThrowsException()
     {
