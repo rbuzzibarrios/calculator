@@ -13,7 +13,7 @@ class FizzBuzz
 
     /**
      * FizzBuzz constructor.
-     * @param int $number
+     * @param int $maxNumber
      */
     public function __construct(int $maxNumber)
     {
@@ -29,7 +29,7 @@ class FizzBuzz
     }
 
     /**
-     * @param mixed $number
+     * @param mixed $maxNumber
      */
     public function setMaxNumber($maxNumber)
     {
