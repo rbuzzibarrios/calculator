@@ -8,73 +8,45 @@ use PHPUnit\Framework\TestCase;
 class FizzBuzzTest extends TestCase
 {
     /**
-     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 3
+     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 3 y 21
      */
-    public function testIsFizzBuzzThree()
+    public function testReturnFizzIfMultipleOfThree()
     {
         $fizzbuzz = new FizzBuzz(3);
         $this->assertEquals("Fizz\n", $fizzbuzz->isFizzBuzz(3), 'Retorna Fizz si 3 es divisible por 3');
-    }
-
-    /**
-     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 21
-     */
-    public function testIsFizzBuzzTwentyOne()
-    {
         $fizzbuzz = new FizzBuzz(21);
         $this->assertEquals("Fizz\n", $fizzbuzz->isFizzBuzz(21), 'Retorna Fizz si 21 es divisible por 3');
     }
 
     /**
-     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 5
+     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 5 y 55
      */
-    public function testIsFizzBuzzFive()
+    public function testReturnBuzzIfMultipleOfFive()
     {
         $fizzbuzz = new FizzBuzz(5);
         $this->assertEquals("Buzz\n", $fizzbuzz->isFizzBuzz(5), 'Retorna Buzz si 5 es divisible por 5');
-    }
-
-    /**
-     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 45
-     */
-    public function testIsFizzBuzzFourthyFive()
-    {
-        $fizzbuzz = new FizzBuzz(45);
+        $fizzbuzz = new FizzBuzz(55);
         $this->assertEquals("Buzz\n", $fizzbuzz->isFizzBuzz(55), 'Retorna Buzz si 55 es divisible por 5');
     }
 
     /**
-     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 15
+     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 15 y 30
      */
-    public function testIsFizzBuzzFifteen()
+    public function testReturnFizzBuzzIfMultipleOfThreeAndFive()
     {
         $fizzbuzz = new FizzBuzz(15);
         $this->assertEquals("FizzBuzz\n", $fizzbuzz->isFizzBuzz(15), 'Retorna FizzBuzz si 15 es divisible por 3 y 5');
-    }
-
-    /**
-     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 30
-     */
-    public function testIsFizzBuzzTherty()
-    {
         $fizzbuzz = new FizzBuzz(30);
         $this->assertEquals("FizzBuzz\n", $fizzbuzz->isFizzBuzz(30), 'Retorna FizzBuzz si 30 es divisible por 3 y 5');
     }
 
     /**
-     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 2
+     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 2 y 62
      */
-    public function testIsFizzBuzzTwo()
+    public function testReturnNumberIfNotMultipleOfThreeOrFive()
     {
         $fizzbuzz = new FizzBuzz(2);
         $this->assertEquals("2\n", $fizzbuzz->isFizzBuzz(2), 'Retorna el # si no es divisible por 3 o 5');
-    }
-
-    /**
-     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 62
-     */
-    public function testIsFizzBuzzSixthyTwo()
-    {
         $fizzbuzz = new FizzBuzz(62);
         $this->assertEquals("62\n", $fizzbuzz->isFizzBuzz(62), 'Retorna el # si no es divisible por 3 o 5');
     }
@@ -89,7 +61,7 @@ class FizzBuzzTest extends TestCase
     }
 
     /**
-     * Test para comprobar la funcionalidad de la validacion maxNumber no puede ser < que cero
+     * Test para comprobar la funcionalidad de la validacion maxNumber no puede ser menor que cero
      */
     public function testRunValidationThrowsException()
     {
