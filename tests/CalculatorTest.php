@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 class CalculatorTest extends TestCase
 {
     /**
-     * Test para comprobar la funcionalidad del metodo sum con enteros
+     * Test para comprobar la funcionalidad del metodo sum con enteros.
      */
     public function testSum()
     {
