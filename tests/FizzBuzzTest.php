@@ -30,7 +30,7 @@ class FizzBuzzTest extends TestCase
     }
 
     /**
-     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 15 y 30
+     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 15 y 30.
      */
     public function testReturnFizzBuzzIfMultipleOfThreeAndFive()
     {
