@@ -19,7 +19,7 @@ class FizzBuzzTest extends TestCase
     }
 
     /**
-     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 5 y 55
+     * Test para comprobar la funcinalidad del método isFizzBuzz con 5 y 55
      */
     public function testReturnBuzzIfMultipleOfFive()
     {
