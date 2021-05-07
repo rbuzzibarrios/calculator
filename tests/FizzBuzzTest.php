@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 class FizzBuzzTest extends TestCase
 {
     /**
-     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 3 y 21
+     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 3 y 21.
      */
     public function testReturnFizzIfMultipleOfThree()
     {
