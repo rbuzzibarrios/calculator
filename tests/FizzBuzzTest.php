@@ -41,7 +41,7 @@ class FizzBuzzTest extends TestCase
     }
 
     /**
-     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 2 y 62
+     * Test para comprobar la funcinalidad del metodo isFizzBuzz con 2 y 62.
      */
     public function testReturnNumberIfNotMultipleOfThreeOrFive()
     {
