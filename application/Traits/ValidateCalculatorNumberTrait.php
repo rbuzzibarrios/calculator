@@ -10,7 +10,7 @@ trait ValidateCalculatorNumberTrait
             if (in_array('required', $validations) && is_null($this->{$attributeNumber})) {
                 throw new \Exception("{$attributeNumber} attribute is required.");
             }
-
+// probando
             if (in_array('not_equal_zero', $validations) && $this->{$attributeNumber} === 0.0) {
                 throw new \Exception("{$attributeNumber} attribute can not be zero.");
             }
